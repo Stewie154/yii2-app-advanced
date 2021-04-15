@@ -1,0 +1,10 @@
+{
+  "QueueConfigurations": [
+      {
+          "QueueArn": "arn:aws:sqs:elasticmq:000000000000:localbucket",
+          "Events": [
+              "s3:ObjectCreated:*"
+          ]
+      }
+  ]
+}

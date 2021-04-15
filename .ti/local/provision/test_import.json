@@ -1,0 +1,27 @@
+{
+  "user": {
+    "token": "c5c20f904dc3083361f37a2404e1c2c052ee6cf4"
+  },
+  "timings": [
+ {
+   "ID": 3375721387992294000,
+   "Duration": 932,
+   "Start Date": "2020-06-24T07:46:27+01:00",
+   "End Date": "2020-06-24T08:01:59+01:00",
+   "Project": "Unbillable ▸ U2 - Downtime ▸ U2-2 - Working Through Emails",
+   "Title": "",
+   "Notes": "",
+   "code":"U2-2"
+ },
+ {
+   "ID": 3375721387992294400,
+   "Duration": 2817,
+   "Start Date": "2020-06-24T08:01:59+01:00",
+   "End Date": "2020-06-24T08:48:56+01:00",
+   "Project": "Work ▸ W136 - Related Products Function ▸ W136-1 - Build",
+   "Title": "",
+   "Notes": "",
+   "code":"W136-1"
+ }
+]
+}
