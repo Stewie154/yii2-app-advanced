@@ -5,6 +5,7 @@ namespace frontend\controllers;
 use yii\web\Controller;
 use yii\data\Pagination;
 use frontend\models\Posts;
+use yii\web\HttpException;
 
 class PostsController extends Controller
 {
@@ -25,6 +26,15 @@ class PostsController extends Controller
         return $this->render('index', [
             'posts' => $posts,
             'pagination' => $pagination,
+        ]);
+    }
+    public function actionView($ID) {
+        $model=Posts::findOne($ID);
+        if ($model === null) {
+            throw new HttpException(404, "Couldn't find post");
+        }
+        return $this->render('view', [
+            'model' => $model
         ]);
     }
 }

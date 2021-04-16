@@ -17,10 +17,6 @@ h1 {
 }
 
 .post-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     width: 30%;
     min-height: 300px;
     margin: 10px;
@@ -30,6 +26,14 @@ h1 {
     transition: 0.2s ease;
     cursor: pointer;
 }
+
+.post-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .post-card:hover {
     background-color: rgb(144, 224, 255);
 }
@@ -71,5 +75,16 @@ a, a:hover, a:focus, a:active {
     .post-card {
         width: 90%;
     }
+}
+
+
+/* view.php */
+
+#by {
+    font-style: italic;
+}
+
+h2 {
+    text-align: center;
 }
 

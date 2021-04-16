@@ -36,14 +36,18 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /*
+        
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                '<controller:[\w\-]+>/<action:[\w\-]+>/<ID:\d+>/<ID2:[\w\-]+>'  => '<controller>/<action>',
+                '<controller:[\w\-]+>/<action:[\w\-]+>/<ID:\d+>'                => '<controller>/<action>',
+                '<controller:[\w\-]+>/<action:[\w\-]+>'                         => '<controller>/<action>',
+                '<controller:[\w\-]+>/<action:[\w\-]+>/<slug:[\w\-]+>'          => '<controller>/<action>',
             ],
         ],
-        */
+        
     ],
     'params' => $params,
 ];

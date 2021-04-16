@@ -5,13 +5,13 @@ use yii\widgets\LinkPager;
 <h1>All Posts</h1>
 <div class="posts-container">
     <?php foreach ($posts as $post): ?>
-            <div class="post-card">
-                <a href="https://www.google.co.uk/">
-                    <h3><?=$post->Title?></h3>
-                </a>
+        <a class="post-card" href="/posts/view/<?=$post->ID?>">
+            <div class="post-body">
+                <h3><?=$post->Title?></h3>
                 <img src=<?=$post->picture?> alt="author">
                 <h4>By: <?=$post->Author?></h4>
             </div>
+        </a>
     <?php endforeach; ?>
 </div>
 
