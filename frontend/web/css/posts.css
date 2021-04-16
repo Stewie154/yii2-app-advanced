@@ -4,14 +4,6 @@ h1 {
     text-decoration: underline;
 }
 
-/* .posts-wrapper {
-    margin: 0 auto;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 .posts-container {
     margin:  auto;
     width: 90%;
@@ -41,6 +33,17 @@ h1 {
 .post-card:hover {
     background-color: rgb(144, 224, 255);
 }
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+    list-style-type: none;
+}
+
+/* .post-card h3 a {
+    color: black;
+    text-decoration: none;
+} */
 
 .post-card h3 {
     text-align: center;
