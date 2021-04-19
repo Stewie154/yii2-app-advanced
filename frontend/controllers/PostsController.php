@@ -53,4 +53,24 @@ class PostsController extends Controller
             return $this->render('new', ['model' => $model]);
         }
     }
+
+    public function actionEdit($ID) {
+        $model=Posts::findOne($ID);
+
+        if ($model === null) {
+            throw new HttpException(404, "Couldn't find post");
+        }
+
+        if (Yii::$app->request->post()) {
+            if ($model->load(Yii::$app->request->post()) && $model->save()) {
+                Yii::$app->getSession ()->setFlash ('success', "Post Updated");
+                return $this->redirect('/posts/view/' . $model->ID);
+            }
+        }
+
+        return $this->render('edit', [
+            'model' => $model
+        ]);
+    }
+    
 }
