@@ -47,7 +47,7 @@ class PostsController extends Controller
 
             // do something meaningful here about $model ...
 
-            return $this->render('confirmed', ['model' => $model]);
+            return $this->render('view', ['model' => $model]);
         } else {
             // either the page is initially displayed or there is some validation error
             return $this->render('new', ['model' => $model]);
