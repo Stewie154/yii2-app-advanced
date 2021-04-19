@@ -10,7 +10,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Title') ?>
 
-    <?= $form->field($model, 'Content') ?>
+    <?= $form->field($model, 'Content')->textArea(['rows' => '10']) ?>
 
     <?= $form->field($model, 'picture') ?>
 
