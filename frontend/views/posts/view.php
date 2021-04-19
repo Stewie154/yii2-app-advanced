@@ -6,9 +6,9 @@
 <div class="author-info">
     <img id="view-pic" src=<?=$model->picture?> alt="author">
     <ul class="social-links">
-        <li><a href="https://www.google.co.uk/">Twitter</a></li>
-        <li><a href="https://www.google.co.uk/">Facebook</a></li>
-        <li><a href="https://www.google.co.uk/">Instagram</a></li>
+        <li><a href=<?=$model->Twitter?>>Twitter</a></li>
+        <li><a href=<?=$model->Facebook?>>Facebook</a></li>
+        <li><a href=<?=$model->Instagram?>>Instagram</a></li>
     </ul>
 </div>
 

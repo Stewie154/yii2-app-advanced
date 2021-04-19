@@ -14,6 +14,12 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'picture') ?>
 
+    <?= $form->field($model, 'Facebook') ?>
+
+    <?= $form->field($model, 'Twitter') ?>
+
+    <?= $form->field($model, 'Instagram') ?>
+
     <div class="form-group">
         <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
     </div>

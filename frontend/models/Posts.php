@@ -15,7 +15,7 @@ class Posts extends ActiveRecord
         return [
             [['Author', 'Title', 'Content', 'picture'], 'required'],
             [['Author', 'Title', 'Content', 'picture'], 'string'],
-            [['picture'], 'url']
+            [['picture', 'Facebook', 'Twitter', 'Instagram'], 'url'],
         ];
     }
 }
