@@ -29,6 +29,7 @@ class PostsController extends Controller
             'pagination' => $pagination,
         ]);
     }
+    
     public function actionView($ID) {
         $model=Posts::findOne($ID);
         if ($model === null) {
@@ -63,7 +64,7 @@ class PostsController extends Controller
 
         if (Yii::$app->request->post()) {
             if ($model->load(Yii::$app->request->post()) && $model->save()) {
-                Yii::$app->getSession ()->setFlash ('success', "Post Updated");
+                Yii::$app->getSession()->setFlash ('success', "Post Updated");
                 return $this->redirect('/posts/view/' . $model->ID);
             }
         }
@@ -73,4 +74,11 @@ class PostsController extends Controller
         ]);
     }
     
+    public function actionDelete($ID) {
+        $model=Posts::findOne($ID);
+        $model->delete();
+        Yii::$app->getSession()->setFlash ('danger', "Post Deleted");
+        return $this->redirect('/posts/index');
+    }
+
 }

@@ -17,4 +17,4 @@
 
 <a class="btn btn-primary" href="/posts/index">Back</a>
 <a class="btn btn-primary" href="/posts/edit/<?=$model->ID?>">Edit</a>
-<a class="btn btn-danger" >Delete</a>
+<a class="btn btn-danger" href="/posts/delete/<?=$model->ID?>" >Delete</a>
