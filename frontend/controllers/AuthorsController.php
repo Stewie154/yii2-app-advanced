@@ -29,4 +29,14 @@ class AuthorsController extends Controller {
             'pagination' => $pagination
         ]);
     }
+
+    public function actionView($ID) {
+        $model = Authors::findOne($ID);
+        if ($model === null) {
+            throw new HttpException(404, "Couldn't find post");
+        }
+        return $this->render('view', [
+            'model' => $model
+        ]);
+    }
 }

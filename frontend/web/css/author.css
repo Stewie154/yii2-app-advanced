@@ -1,0 +1,27 @@
+.author-pic {
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+} 
+
+li {
+    font-size: 17px;
+}
+
+li .bold {
+    font-weight: bold;
+}
+
+.view-posts {
+    margin: 0 auto;
+    width: 70%;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-posts a {
+    margin: 10px;
+}
