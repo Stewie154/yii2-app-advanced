@@ -7,7 +7,7 @@ use yii\widgets\LinkPager;
 
 <div class="posts-container">
     <?php foreach ($authors as $author): ?>
-        <a class="post-card" href="/posts/view/<?=$author->ID?>">
+        <a class="post-card" href="/authors/view/<?=$author->ID?>">
             <div class="post-body">
                 <h3><?=$author->name?></h3>
                 <img src=<?=$author->picture?> alt="author">
