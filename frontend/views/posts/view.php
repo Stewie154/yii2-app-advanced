@@ -4,7 +4,10 @@
 <p class="content"><?=$model->Content?></p>
 <h2>Follow <?=$model->author->name?>:</h2>
 <div class="author-info">
-    <img id="view-pic" src=<?=$model->author->picture?> alt="author">
+    <a href="/authors/view/<?=$model->author->ID?>">
+        <img id="view-pic" src=<?=$model->author->picture?> alt="author">
+    </a>
+    
     <ul class="social-links">
         <li><a href=<?=$model->Twitter?>>Twitter</a></li>
         <li><a href=<?=$model->Facebook?>>Facebook</a></li>
