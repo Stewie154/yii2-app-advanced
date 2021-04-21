@@ -18,7 +18,7 @@ class Posts extends ActiveRecord
     {
         return [
             [['author_id', 'Title', 'Content', 'picture'], 'required'],
-            [['Author', 'Title', 'Content', 'picture'], 'string'],
+            [['Title', 'Content', 'picture'], 'string'],
             [['picture', 'Facebook', 'Twitter', 'Instagram'], 'url'],
         ];
     }

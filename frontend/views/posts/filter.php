@@ -6,7 +6,7 @@
         <div class="post-body">
             <h3><?=$post->Title?></h3>
             <img src=<?=$post->picture?> alt="author">
-            <h4>By: <?=$post->Author?></h4>
+            <h4>By: <?=$post->author->name?></h4>
         </div>
     </a> 
     <?php endforeach;?> 

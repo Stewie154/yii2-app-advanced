@@ -63,6 +63,7 @@ a, a:hover, a:focus, a:active {
 
 .post-card h4 {
     font-style: italic;
+    text-align: center;
 }
 
 @media only screen and (max-width: 991px) {

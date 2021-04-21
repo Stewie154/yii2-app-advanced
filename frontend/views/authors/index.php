@@ -11,7 +11,7 @@ use yii\widgets\LinkPager;
             <div class="post-body">
                 <h3><?=$author->name?></h3>
                 <img src=<?=$author->picture?> alt="author">
-                <h4>"<?=$author->fact?>"</h2>
+                <h4>"<?=$author->fact?>"</h4>
             </div>
         </a>
     <?php endforeach; ?>
