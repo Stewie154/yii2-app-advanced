@@ -1,5 +1,3 @@
-
-
 <h1><?=$model->name?></h1>
 <br>
 <div class="author-info">
@@ -11,15 +9,15 @@
         <li><span class="bold">Fun Fact: </span><?=$model->fact?></li>
     </ul>
 </div>
+
 <h3>Bio: </h3>
+
 <p><?=$model->bio?></p>
+
 <div class="view-posts">
     <h2>View <?=$model->name?>'s Posts:</h2>
-    <a class="btn btn-info btn-lg" href="/posts/filter">View</a>
+    <a class="btn btn-info btn-lg" href="/posts/filter/<?=$model->ID?>">View</a>
 </div>
 
-
-
-
-
 <a class="btn btn-primary" href="/authors/index">Back</a>
+

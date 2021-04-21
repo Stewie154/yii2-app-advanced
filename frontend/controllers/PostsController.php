@@ -6,6 +6,7 @@ use yii\web\Controller;
 use yii\data\Pagination;
 use frontend\models\Posts;
 use yii\web\HttpException;
+use frontend\models\Authors;
 use yii;
 
 class PostsController extends Controller
@@ -79,6 +80,15 @@ class PostsController extends Controller
         $model->delete();
         Yii::$app->getSession()->setFlash ('danger', "Post Deleted");
         return $this->redirect('/posts/index');
+    }
+
+    public function actionFilter($ID) {
+        
+        $model = Authors::findOne(['ID' => $ID]);
+        if ($model == null) {
+            throw new HttpException(404, "Couldn't find Author");
+        }
+        return $this->render('filter', ['model' => $model]);
     }
 
 }

@@ -10,10 +10,14 @@ class Posts extends ActiveRecord
         return 'posts';
     }
 
+    public function getAuthor() {
+        return $this->hasOne(Authors::className(), ['ID' => 'author_id']);
+    }
+
     public function rules()
     {
         return [
-            [['Author', 'Title', 'Content', 'picture'], 'required'],
+            [['author_id', 'Title', 'Content', 'picture'], 'required'],
             [['Author', 'Title', 'Content', 'picture'], 'string'],
             [['picture', 'Facebook', 'Twitter', 'Instagram'], 'url'],
         ];

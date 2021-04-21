@@ -1,12 +1,14 @@
 <?php
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use frontend\models\Authors;
 ?>
 
 <h1><?= 'Edit Post' ?></h1>
 <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'Author') ?>
+    <?= $form->field($model, 'author_id')->dropDownList( ArrayHelper::map(Authors::find()->all(), 'ID', 'name'),['prompt'=>'']) ?>
 
     <?= $form->field($model, 'Title') ?>
 
