@@ -4,7 +4,7 @@ namespace frontend\controllers;
 
 use yii\web\Controller;
 use yii\data\Pagination;
-use frontend\models\Authors;
+use common\models\Authors;
 use yii\web\HttpException;
 use yii;
 
@@ -19,7 +19,7 @@ class AuthorsController extends Controller {
             'totalCount' => $query->count(),
         ]);
 
-        $authors = $query->orderBy('ID')
+        $authors = $query->orderBy('id')
             ->offset($pagination->offset)
             ->limit($pagination->limit)
             ->all();

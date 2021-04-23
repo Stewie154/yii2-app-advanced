@@ -16,7 +16,7 @@
 
 <div class="view-posts">
     <h2>View <?=$model->name?>'s Posts:</h2>
-    <a class="btn btn-info btn-lg" href="/posts/filter/<?=$model->ID?>">View</a>
+    <a class="btn btn-info btn-lg" href="/posts/filter/<?=$model->id?>">View</a>
 </div>
 
 <a class="btn btn-primary" href="/authors/index">Back</a>

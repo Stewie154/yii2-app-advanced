@@ -4,7 +4,7 @@
 <p class="content"><?=$model->Content?></p>
 <h2>Follow <?=$model->author->name?>:</h2>
 <div class="author-info">
-    <a href="/authors/view/<?=$model->author->ID?>">
+    <a href="/authors/view/<?=$model->author->id?>">
         <img id="view-pic" src=<?=$model->author->picture?> alt="author">
     </a>
     
@@ -19,5 +19,5 @@
 
 
 <a class="btn btn-primary" href="/posts/index">Back</a>
-<a class="btn btn-primary" href="/posts/edit/<?=$model->ID?>">Edit</a>
-<a class="btn btn-danger" href="/posts/delete/<?=$model->ID?>" >Delete</a>
+<a class="btn btn-primary" href="/posts/edit/<?=$model->id?>">Edit</a>
+<a class="btn btn-danger" href="/posts/delete/<?=$model->id?>" >Delete</a>

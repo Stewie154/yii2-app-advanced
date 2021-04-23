@@ -4,9 +4,9 @@ namespace frontend\controllers;
 
 use yii\web\Controller;
 use yii\data\Pagination;
-use frontend\models\Posts;
+use common\models\Posts;
 use yii\web\HttpException;
-use frontend\models\Authors;
+use common\models\Authors;
 use yii;
 
 class PostsController extends Controller
@@ -20,7 +20,7 @@ class PostsController extends Controller
             'totalCount' => $query->count(),
         ]);
 
-        $posts = $query->orderBy('ID')
+        $posts = $query->orderBy('id')
             ->offset($pagination->offset)
             ->limit($pagination->limit)
             ->all();
@@ -66,7 +66,7 @@ class PostsController extends Controller
         if (Yii::$app->request->post()) {
             if ($model->load(Yii::$app->request->post()) && $model->save()) {
                 Yii::$app->getSession()->setFlash ('success', "Post Updated");
-                return $this->redirect('/posts/view/' . $model->ID);
+                return $this->redirect('/posts/view/' . $model->id);
             }
         }
 
@@ -84,7 +84,7 @@ class PostsController extends Controller
 
     public function actionFilter($ID) {
         
-        $model = Authors::findOne(['ID' => $ID]);
+        $model = Authors::findOne(['id' => $ID]);
         if ($model == null) {
             throw new HttpException(404, "Couldn't find Author");
         }

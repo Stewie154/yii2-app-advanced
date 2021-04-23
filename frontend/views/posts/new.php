@@ -2,13 +2,13 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
-use frontend\models\Authors;
+use common\models\Authors;
 ?>
 
 <h1><?= 'Create New Post' ?></h1>
 <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'author_id')->dropDownList( ArrayHelper::map(Authors::find()->all(), 'ID', 'name'),['prompt'=>'']) ?>
+    <?= $form->field($model, 'author_id')->dropDownList( ArrayHelper::map(Authors::find()->all(), 'id', 'name'),['prompt'=>'']) ?>
 
     <?= $form->field($model, 'Title') ?>
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\models;
+namespace common\models;
 
 use yii\db\ActiveRecord;
 
@@ -11,7 +11,7 @@ class Posts extends ActiveRecord
     }
 
     public function getAuthor() {
-        return $this->hasOne(Authors::className(), ['ID' => 'author_id']);
+        return $this->hasOne(Authors::className(), ['id' => 'author_id']);
     }
 
     public function rules()

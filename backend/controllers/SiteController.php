@@ -6,6 +6,8 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use common\models\Posts;
+use yii\data\Pagination;
 
 /**
  * Site controller
@@ -78,7 +80,22 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->redirect('/');
+
+            $query = Posts::find();
+            $pagination = new Pagination([
+                'defaultPageSize' => 5,
+                'totalCount' => $query->count(),
+            ]);
+            $posts = $query->orderBy('id')
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
+
+            return $this->render('../../../frontend/views/posts/index', [
+                'posts' => $posts,
+                'pagination' => $pagination,
+            ]);
         } else {
             $model->password = '';
 
