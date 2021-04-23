@@ -81,22 +81,10 @@ class SiteController extends Controller
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
 
-            $query = Posts::find();
-            $pagination = new Pagination([
-                'defaultPageSize' => 5,
-                'totalCount' => $query->count(),
-            ]);
-            $posts = $query->orderBy('id')
-            ->offset($pagination->offset)
-            ->limit($pagination->limit)
-            ->all();
+            return $this->redirect('http://frontend.myblog.local/posts/index');
 
-
-            return $this->render('../../../frontend/views/posts/index', [
-                'posts' => $posts,
-                'pagination' => $pagination,
-            ]);
         } else {
+
             $model->password = '';
 
             return $this->render('login', [
